@@ -16,7 +16,7 @@ def create_project_structure(project_path: Path):
         "data/processed",
         "notebooks",
         "scripts",
-        "results"
+        "results",
         "docs",
         "config",
     ]
@@ -49,7 +49,7 @@ def copy_notebook_template(project_path: Path):
     template_dir = current_dir / TEMPLATE_DIR_NAME
     notebook_template = template_dir / "analysis_template.ipynb"
 
-    target_path = project_path / "notebooks" / "01_analysis_template.ipynb"
+    target_path = project_path / "notebooks" / "notebook.ipynb"
     target_path.write_text(notebook_template.read_text(encoding="utf-8"), encoding="utf-8")
 
 def init_command(args):
